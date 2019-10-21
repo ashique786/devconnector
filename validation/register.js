@@ -11,14 +11,14 @@ module.exports = function validateRegisterInput(data) {
         errors.name = 'name field should not be empty';
 
     }
-  
+
     else if (!validator.isLength(data.name, { min: 2, max: 30 })) {
-        errors.name = 'name must be between 2 and 30 characters';
+        errors.name = 'Name must be between 2 and 30 characters';
     }
-   
+
 
     if (validator.isEmpty(data.email)) {
-       errors.email = 'email field should not be empty';
+        errors.email = 'email field should not be empty';
 
     }
     else if (!validator.isEmail(data.email)) {
@@ -37,7 +37,7 @@ module.exports = function validateRegisterInput(data) {
         errors.password2 = 'password2 field should not be empty';
 
     }
-   else if (!validator.equals(data.password, data.password2)) {
+    else if (!validator.equals(data.password, data.password2)) {
         errors.password2 = 'password2 must match';
 
     }
