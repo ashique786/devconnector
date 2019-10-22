@@ -21,7 +21,7 @@ const profileSchema = new Schema({
         type:String,
     },
     location:{
-        type:string,
+        type:String,
     },
     status:{
         type:String,
